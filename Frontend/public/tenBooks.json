@@ -1,0 +1,104 @@
+{
+  "booksArray": [
+    {
+      "title": "A Tale of Two Cities",
+      "author": "Charles Dickens",
+      "original_language": "English",
+      "first_published": 1859,
+      "approximate_sales": ">200 million",
+      "genre": "history, fiction",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": "₹499"
+    },
+    {
+      "title": "The Little Prince",
+      "author": "Antoine de Saint-Exupéry",
+      "original_language": "French",
+      "first_published": 1943,
+      "approximate_sales": "200 million",
+      "genre": "fantasy, children, fiction",
+      "image": "https://m.media-amazon.com/images/I/71OZY035QKL.jpg",
+      "price": "₹349"
+    },
+    {
+      "title": "The Alchemist",
+      "author": "Paulo Coelho",
+      "original_language": "Portuguese",
+      "first_published": 1988,
+      "approximate_sales": "150 million",
+      "genre": "fantasy",
+      "image": "https://m.media-amazon.com/images/I/61HAE8zahLL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹299"
+    },
+    {
+      "title": "Harry Potter and the Philosopher's Stone",
+      "author": "J. K. Rowling",
+      "original_language": "English",
+      "first_published": 1997,
+      "approximate_sales": "120 million",
+      "genre": "fantasy, children, fiction",
+      "image": "https://m.media-amazon.com/images/I/81q77Q39nEL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹799"
+    },
+    {
+      "title": "And Then There Were None",
+      "author": "Agatha Christie",
+      "original_language": "English",
+      "first_published": 1939,
+      "approximate_sales": "100 million",
+      "genre": "mystery",
+      "image": "https://m.media-amazon.com/images/I/71NvWibzW5L._UF1000,1000_QL80_.jpg",
+      "price": "₹450"
+    },
+    {
+      "title": "Dream of the Red Chamber",
+      "author": "Cao Xueqin",
+      "original_language": "Chinese",
+      "first_published": 1791,
+      "approximate_sales": "100 million",
+      "genre": "family saga",
+      "image": "https://m.media-amazon.com/images/I/81goWW8O20L._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹650"
+    },
+    {
+      "title": "The Hobbit",
+      "author": "J. R. R. Tolkien",
+      "original_language": "English",
+      "first_published": 1937,
+      "approximate_sales": "100 million",
+      "genre": "fantasy, children, fiction",
+      "image": "https://m.media-amazon.com/images/I/712cDO7d73L._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹599"
+    },
+    {
+      "title": "Alice's Adventures in Wonderland",
+      "author": "Lewis Carroll",
+      "original_language": "English",
+      "first_published": 1865,
+      "approximate_sales": "100 million",
+      "genre": "fantasy, absurdist, fiction",
+      "image": "https://m.media-amazon.com/images/I/91uMrXq+4RL.jpg",
+      "price": "₹399"
+    },
+    {
+      "title": "The Lion, the Witch and the Wardrobe",
+      "author": "C.S. Lewis",
+      "original_language": "English",
+      "first_published": 1950,
+      "approximate_sales": "85 million",
+      "genre": "fantasy, children, fiction",
+      "image": "https://m.media-amazon.com/images/I/81gGu7UdZ2L._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹550"
+    },
+    {
+      "title": "She: A History of Adventure",
+      "author": "H. Rider Haggard",
+      "original_language": "English",
+      "first_published": 1887,
+      "approximate_sales": "83 million",
+      "genre": "adventure",
+      "image": "https://m.media-amazon.com/images/I/612HiSyvnQL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹475"
+    }
+  ]
+}
