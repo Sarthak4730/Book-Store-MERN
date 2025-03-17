@@ -3,8 +3,18 @@ const app = express();
 
 const mongoose = require('mongoose');
 
+app.use( express.json() );
+const cors = require('cors');
+app.use( cors( {
+    origin: ['http://localhost:3000'],
+    credentials: true
+} ) );
+const bookRoutes = require('./src/books/book.route');
+app.use('/api/books', bookRoutes);
+
+require('dotenv').config();
 async function main(){
-    await mongoose.connect("mongodb+srv://sarthakasm07:test123@cluster0.b18x2.mongodb.net/book-store?retryWrites=true&w=majority&appName=Cluster0");
+    await mongoose.connect(process.env.DB_URL);
     app.use('/', (req, res) => {
         res.send("book store server");
     });
