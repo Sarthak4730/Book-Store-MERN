@@ -1,17 +1,22 @@
 import { useState, useEffect } from "react";
 import { BookCard } from '../pages/Books/BookCard'
+import { useFetchAllBooksQuery } from "../redux/features/books/booksApi";
 
 const TopSellers = () => {
-  const [books, setBooks] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("Choose a category");
+  // const [books, setBooks] = useState([]);
 
-  async function getBooks(){
-    let a = await fetch("tenBooks.json");
-    let b = await a.json();
-    console.log(b.booksArray);
-    setBooks(b.booksArray);
-  }
-  useEffect(() => { getBooks(); }, []);
+  // async function getBooks(){
+  //   let a = await fetch("tenBooks.json");
+  //   let b = await a.json();
+  //   console.log(b.booksArray);
+  //   setBooks(b.booksArray);
+  // }
+  
+  // useEffect(() => { getBooks(); }, []);
+
+  const { data: books = [] } = useFetchAllBooksQuery();
+  console.log(books);
   
   const categories = ["Choose a category", "absurdist", "adventure", "anthropology", "astrophysics", "autobiography", "bildungsroman", "children", "coming of age", "cosmology", "essay", "fantasy", "family saga", "fiction", "gothic", "history", "horror", "jewish", "literature", "magic", "manual", "memoir", "mystery", "non fiction", "novel", "novella", "philosophy", "realism", "realist", "romance", "romantic", "science", "self help", "socialist", "thriller", "war", "young adult"];
   
