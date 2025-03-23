@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar=({ count })=>{
   return(
-    <nav className="flex justify-between items-center h-[7.5vh] w-[80vw] fixed top-0 left-36 bg-white bg-opacity-100 z-10">
+    <nav className="flex justify-between items-center h-[7.5vh] w-[100vw] fixed top-0 px-10 bg-white z-10">
         <div className="left flex w-[25vw] justify-between">
             <Link to="/">
               <svg className="mt-1.5" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><g fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path strokeDasharray={16} strokeDashoffset={16} d="M5 21h14"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"></animate></path><path strokeDasharray={14} strokeDashoffset={14} d="M5 21v-13M19 21v-13"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="14;0"></animate></path><path strokeDasharray={28} strokeDashoffset={28} d="M2 10l10 -8l10 8"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.6s" values="28;0"></animate></path></g></svg> 
