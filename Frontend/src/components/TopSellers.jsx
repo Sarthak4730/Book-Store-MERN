@@ -15,7 +15,10 @@ const TopSellers = () => {
   
   // useEffect(() => { getBooks(); }, []);
 
-  const { data: books = [] } = useFetchAllBooksQuery();
+  // const { data: books = [] } = useFetchAllBooksQuery();
+  const { data } = useFetchAllBooksQuery();
+  const books = data?.books || [];
+
   console.log(books);
   
   const categories = ["Choose a category", "absurdist", "adventure", "anthropology", "astrophysics", "autobiography", "bildungsroman", "children", "coming of age", "cosmology", "essay", "fantasy", "family saga", "fiction", "gothic", "history", "horror", "jewish", "literature", "magic", "manual", "memoir", "mystery", "non fiction", "novel", "novella", "philosophy", "realism", "realist", "romance", "romantic", "science", "self help", "socialist", "thriller", "war", "young adult"];
