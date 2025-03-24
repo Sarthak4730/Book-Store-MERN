@@ -7,7 +7,8 @@
       "first_published": 1859,
       "approximate_sales": ">200 million",
       "genre": "history, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": "₹110"
     },
     {
       "title": "The Little Prince",
@@ -16,7 +17,8 @@
       "first_published": 1943,
       "approximate_sales": "200 million",
       "genre": "fantasy, children, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71OZY035QKL.jpg",
+      "price": "₹824"
     },
     {
       "title": "The Alchemist",
@@ -25,7 +27,8 @@
       "first_published": 1988,
       "approximate_sales": "150 million",
       "genre": "fantasy",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/61HAE8zahLL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹258"
     },
     {
       "title": "Harry Potter and the Philosopher's Stone",
@@ -34,7 +37,8 @@
       "first_published": 1997,
       "approximate_sales": "120 million",
       "genre": "fantasy, children, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81q77Q39nEL.jpg",
+      "price": "₹375"
     },
     {
       "title": "And Then There Were None",
@@ -43,7 +47,8 @@
       "first_published": 1939,
       "approximate_sales": "100 million",
       "genre": "mystery",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71pOMFWk7sL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹259"
     },
     {
       "title": "Dream of the Red Chamber",
@@ -52,7 +57,8 @@
       "first_published": 1791,
       "approximate_sales": "100 million",
       "genre": "family saga",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/91DOl2PgkfL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹753"
     },
     {
       "title": "The Hobbit",
@@ -61,7 +67,8 @@
       "first_published": 1937,
       "approximate_sales": "100 million",
       "genre": "fantasy, children, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81mCE+uclxL._UF1000,1000_QL80_.jpg",
+      "price": "₹257"
     },
     {
       "title": "Alice's Adventures in Wonderland",
@@ -70,7 +77,8 @@
       "first_published": 1865,
       "approximate_sales": "100 million",
       "genre": "fantasy, absurdist, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/91uMrXq+4RL.jpg",
+      "price": "₹509"
     },
     {
       "title": "The Lion, the Witch and the Wardrobe",
@@ -79,7 +87,8 @@
       "first_published": 1950,
       "approximate_sales": "85 million",
       "genre": "fantasy, children, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81N3dK1fIIL.jpg",
+      "price": "₹273"
     },
     {
       "title": "She: A History of Adventure",
@@ -88,7 +97,8 @@
       "first_published": 1887,
       "approximate_sales": "83 million",
       "genre": "adventure",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/716JFCWP1zL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹829"
     },
     {
       "title": "The Da Vinci Code",
@@ -97,7 +107,8 @@
       "first_published": 2003,
       "approximate_sales": "80 million",
       "genre": "mystery, thriller",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71y4X5150dL.jpg",
+      "price": "₹325"
     },
     {
       "title": "Harry Potter and the Chamber of Secrets",
@@ -106,7 +117,8 @@
       "first_published": 1998,
       "approximate_sales": "77 million",
       "genre": "fantasy, children, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/818umIdoruL.jpg",
+      "price": "₹375"
     },
     {
       "title": "The Catcher in the Rye",
@@ -115,7 +127,8 @@
       "first_published": 1951,
       "approximate_sales": "65 million",
       "genre": "coming of age",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/8125BDk3l9L.jpg",
+      "price": "₹772"
     },
     {
       "title": "The Bridges of Madison County",
@@ -124,7 +137,8 @@
       "first_published": 1992,
       "approximate_sales": "60 million",
       "genre": "romance",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81rpCuu7zVL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹686"
     },
     {
       "title": "One Hundred Years of Solitude",
@@ -133,7 +147,8 @@
       "first_published": 1967,
       "approximate_sales": "50 million",
       "genre": "magic, realism",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81oAEEwxBWL.jpg",
+      "price": "₹299"
     },
     {
       "title": "Lolita",
@@ -142,7 +157,8 @@
       "first_published": 1955,
       "approximate_sales": "50 million",
       "genre": "novel",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71dfSg9HdoL.jpg",
+      "price": "₹433"
     },
     {
       "title": "Heidi",
@@ -151,7 +167,8 @@
       "first_published": 1880,
       "approximate_sales": "50 million",
       "genre": "children, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71K1AwaMYvL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹241"
     },
     {
       "title": "The Common Sense Book of Baby and Child Care",
@@ -160,7 +177,8 @@
       "first_published": 1946,
       "approximate_sales": "50 million",
       "genre": "manual",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/41ZeE79aT-L._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹250"
     },
     {
       "title": "Anne of Green Gables",
@@ -169,7 +187,8 @@
       "first_published": 1908,
       "approximate_sales": "50 million",
       "genre": "children, novel",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71mKX08j5OL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹394"
     },
     {
       "title": "Black Beauty",
@@ -178,7 +197,8 @@
       "first_published": 1877,
       "approximate_sales": "50 million",
       "genre": "children, literature",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/81Y6K6AuVLL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹329"
     },
     {
       "title": "The Name of the Rose",
@@ -187,7 +207,8 @@
       "first_published": 1980,
       "approximate_sales": "50 million",
       "genre": "history, novel, mystery",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/8116+Fd8+XL.jpg",
+      "price": "₹498"
     },
     {
       "title": "The Eagle Has Landed",
@@ -196,7 +217,8 @@
       "first_published": 1975,
       "approximate_sales": "50 million",
       "genre": "war, thriller",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/91MVxKz67RL._AC_UF1000,1000_QL80_.jpg",
+      "price": "₹960"
     },
     {
       "title": "Watership Down",
@@ -205,7 +227,8 @@
       "first_published": 1972,
       "approximate_sales": "50 million",
       "genre": "children, fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/71-5og76B2L.jpg",
+      "price": "₹326"
     },
     {
       "title": "The Hite Report",
@@ -214,214 +237,238 @@
       "first_published": 1976,
       "approximate_sales": "50 million",
       "genre": "non fiction",
-      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Charlotte's Web",
-    "author": "E. B. White; illustrated by Garth Williams",
-    "original_language": "English",
-    "first_published": 1952,
-    "approximate_sales": "50 million",
-    "genre": "children, fiction",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Charlotte's Web",
+      "author": "E. B. White; illustrated by Garth Williams",
+      "original_language": "English",
+      "first_published": 1952,
+      "approximate_sales": "50 million",
+      "genre": "children, fiction",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Ginger Man",
-    "author": "J. P. Donleavy",
-    "original_language": "English",
-    "first_published": 1955,
-    "approximate_sales": "50 million",
-    "genre": "novel",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Ginger Man",
+      "author": "J. P. Donleavy",
+      "original_language": "English",
+      "first_published": 1955,
+      "approximate_sales": "50 million",
+      "genre": "novel",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Purpose Driven Life",
-    "author": "Rick Warren",
-    "original_language": "English",
-    "first_published": 2002,
-    "approximate_sales": "50 million",
-    "genre": "philosophy, manual",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Purpose Driven Life",
+      "author": "Rick Warren",
+      "original_language": "English",
+      "first_published": 2002,
+      "approximate_sales": "50 million",
+      "genre": "philosophy, manual",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Tale of Peter Rabbit",
-    "author": "Beatrix Potter",
-    "original_language": "English",
-    "first_published": 1902,
-    "approximate_sales": "45 million",
-    "genre": "children, literature",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Tale of Peter Rabbit",
+      "author": "Beatrix Potter",
+      "original_language": "English",
+      "first_published": 1902,
+      "approximate_sales": "45 million",
+      "genre": "children, literature",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Jonathan Livingston Seagull",
-    "author": "Richard Bach",
-    "original_language": "English",
-    "first_published": 1970,
-    "approximate_sales": "44 million",
-    "genre": "novella, self help",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Jonathan Livingston Seagull",
+      "author": "Richard Bach",
+      "original_language": "English",
+      "first_published": 1970,
+      "approximate_sales": "44 million",
+      "genre": "novella, self help",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Very Hungry Caterpillar",
-    "author": "Eric Carle",
-    "original_language": "English",
-    "first_published": 1969,
-    "approximate_sales": "43 million",
-    "genre": "children, literature",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Very Hungry Caterpillar",
+      "author": "Eric Carle",
+      "original_language": "English",
+      "first_published": 1969,
+      "approximate_sales": "43 million",
+      "genre": "children, literature",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "A Message to Garcia",
-    "author": "Elbert Hubbard",
-    "original_language": "English",
-    "first_published": 1899,
-    "approximate_sales": "40 million",
-    "genre": "essay, literature",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "A Message to Garcia",
+      "author": "Elbert Hubbard",
+      "original_language": "English",
+      "first_published": 1899,
+      "approximate_sales": "40 million",
+      "genre": "essay, literature",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "To Kill a Mockingbird",
-    "author": "Harper Lee",
-    "original_language": "English",
-    "first_published": 1960,
-    "approximate_sales": "40 million",
-    "genre": "gothic, bildungsroman",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "original_language": "English",
+      "first_published": 1960,
+      "approximate_sales": "40 million",
+      "genre": "gothic, bildungsroman",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Flowers in the Attic",
-    "author": "V. C. Andrews",
-    "original_language": "English",
-    "first_published": 1979,
-    "approximate_sales": "40 million",
-    "genre": "gothic, horror, family saga",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Flowers in the Attic",
+      "author": "V. C. Andrews",
+      "original_language": "English",
+      "first_published": 1979,
+      "approximate_sales": "40 million",
+      "genre": "gothic, horror, family saga",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Cosmos",
-    "author": "Carl Sagan",
-    "original_language": "English",
-    "first_published": 1980,
-    "approximate_sales": "40 million",
-    "genre": "science, anthropology, astrophysics, cosmology, philosophy, history",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Cosmos",
+      "author": "Carl Sagan",
+      "original_language": "English",
+      "first_published": 1980,
+      "approximate_sales": "40 million",
+      "genre": "science, anthropology, astrophysics, cosmology, philosophy, history",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Sophie's World",
-    "author": "Jostein Gaarder",
-    "original_language": "Norwegian",
-    "first_published": 1991,
-    "approximate_sales": "40 million",
-    "genre": "philosophy, novel, young adult",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Sophie's World",
+      "author": "Jostein Gaarder",
+      "original_language": "Norwegian",
+      "first_published": 1991,
+      "approximate_sales": "40 million",
+      "genre": "philosophy, novel, young adult",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Angels & Demons",
-    "author": "Dan Brown",
-    "original_language": "English",
-    "first_published": 2000,
-    "approximate_sales": "39 million",
-    "genre": "mystery, thriller",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Angels & Demons",
+      "author": "Dan Brown",
+      "original_language": "English",
+      "first_published": 2000,
+      "approximate_sales": "39 million",
+      "genre": "mystery, thriller",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Alcoholics Anonymous",
-    "author": "William Griffith Wilson",
-    "original_language": "English",
-    "first_published": 1939,
-    "approximate_sales": "Over 37 million",
-    "genre": "self help",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Alcoholics Anonymous",
+      "author": "William Griffith Wilson",
+      "original_language": "English",
+      "first_published": 1939,
+      "approximate_sales": "Over 37 million",
+      "genre": "self help",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Kane and Abel",
-    "author": "Jeffrey Archer",
-    "original_language": "English",
-    "first_published": 1979,
-    "approximate_sales": "37 million",
-    "genre": "novel",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Kane and Abel",
+      "author": "Jeffrey Archer",
+      "original_language": "English",
+      "first_published": 1979,
+      "approximate_sales": "37 million",
+      "genre": "novel",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "How the Steel Was Tempered",
-    "author": "Nikolai Ostrovsky",
-    "original_language": "Russian",
-    "first_published": 1932,
-    "approximate_sales": "36.4 million copies in USSR",
-    "genre": "socialist, realist, novel",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "How the Steel Was Tempered",
+      "author": "Nikolai Ostrovsky",
+      "original_language": "Russian",
+      "first_published": 1932,
+      "approximate_sales": "36.4 million copies in USSR",
+      "genre": "socialist, realist, novel",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "War and Peace",
-    "author": "Leo Tolstoy",
-    "original_language": "Russian",
-    "first_published": 1869,
-    "approximate_sales": "36 million copies in Russia",
-    "genre": "history, novel",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "War and Peace",
+      "author": "Leo Tolstoy",
+      "original_language": "Russian",
+      "first_published": 1869,
+      "approximate_sales": "36 million copies in Russia",
+      "genre": "history, novel",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Adventures of Pinocchio",
-    "author": "Carlo Collodi",
-    "original_language": "Italian",
-    "first_published": 1881,
-    "approximate_sales": "35 million",
-    "genre": "fantasy, children, fiction",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Adventures of Pinocchio",
+      "author": "Carlo Collodi",
+      "original_language": "Italian",
+      "first_published": 1881,
+      "approximate_sales": "35 million",
+      "genre": "fantasy, children, fiction",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Diary of Anne Frank",
-    "author": "Anne Frank",
-    "original_language": "Dutch",
-    "first_published": 1947,
-    "approximate_sales": "35 million",
-    "genre": "history, non fiction, autobiography, memoir, bildungsroman, coming of age, jewish, literature",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Diary of Anne Frank",
+      "author": "Anne Frank",
+      "original_language": "Dutch",
+      "first_published": 1947,
+      "approximate_sales": "35 million",
+      "genre": "history, non fiction, autobiography, memoir, bildungsroman, coming of age, jewish, literature",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Your Erroneous Zones",
-    "author": "Wayne Dyer",
-    "original_language": "English",
-    "first_published": 1976,
-    "approximate_sales": "35 million",
-    "genre": "self help",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Your Erroneous Zones",
+      "author": "Wayne Dyer",
+      "original_language": "English",
+      "first_published": 1976,
+      "approximate_sales": "35 million",
+      "genre": "self help",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Thorn Birds",
-    "author": "Colleen McCullough",
-    "original_language": "English",
-    "first_published": 1977,
-    "approximate_sales": "33 million",
-    "genre": "romantic, family saga",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Thorn Birds",
+      "author": "Colleen McCullough",
+      "original_language": "English",
+      "first_published": 1977,
+      "approximate_sales": "33 million",
+      "genre": "romantic, family saga",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "The Kite Runner",
-    "author": "Khaled Hosseini",
-    "original_language": "English",
-    "first_published": 2003,
-    "approximate_sales": "31.5 million",
-    "genre": "bildungsroman, history, fiction",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "The Kite Runner",
+      "author": "Khaled Hosseini",
+      "original_language": "English",
+      "first_published": 2003,
+      "approximate_sales": "31.5 million",
+      "genre": "bildungsroman, history, fiction",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "Valley of the Dolls",
-    "author": "Jacqueline Susann",
-    "original_language": "English",
-    "first_published": 1966,
-    "approximate_sales": "31 million",
-    "genre": "novel",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "Valley of the Dolls",
+      "author": "Jacqueline Susann",
+      "original_language": "English",
+      "first_published": 1966,
+      "approximate_sales": "31 million",
+      "genre": "novel",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     },
     {
-    "title": "How to Win Friends and Influence People",
-    "author": "Dale Carnegie",
-    "original_language": "English",
-    "first_published": 1936,
-    "approximate_sales": "Over 30 million",
-    "genre": "self help",
-    "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg"
+      "title": "How to Win Friends and Influence People",
+      "author": "Dale Carnegie",
+      "original_language": "English",
+      "first_published": 1936,
+      "approximate_sales": "Over 30 million",
+      "genre": "self help",
+      "image": "https://m.media-amazon.com/images/I/813Yv-lescL._UF1000,1000_QL80_.jpg",
+      "price": ""
     }
   ]
 }
