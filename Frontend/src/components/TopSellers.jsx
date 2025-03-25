@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { BookCard } from '../pages/Books/BookCard'
 import { useFetchAllBooksQuery } from "../redux/features/books/booksApi";
 
@@ -26,7 +26,7 @@ const TopSellers = () => {
   const filteredBooks = selectedCategory === "Choose a category" ? books : books.filter( b => b.genre.includes(selectedCategory) );
 
   return (
-    <div className='w-[88vw] h-[50vh] mx-auto flex flex-col items-center'>
+    <div className='w-[94vw] mx-auto flex flex-col items-center'>
       <h1 className='text-3xl'>Top Sellers</h1>
       
       <select onChange={ e => setSelectedCategory(e.target.value) } className="w=[20vw] bg-yellow-300 my-2.5 p-2 rounded-xl font-semibold cursor-pointer hover:bg-black hover:text-yellow-300" name="category" id="category">

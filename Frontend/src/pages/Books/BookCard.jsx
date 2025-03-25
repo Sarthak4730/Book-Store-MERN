@@ -8,7 +8,7 @@ export const BookCard = ( {book} ) => {
         dispatch( addToCart(product) )
     }
 
-    return <div className="bg-yellow-300 w-[18vw] h-[80vh] m-5 flex flex-col justify-between p-3 rounded-xl relative">
+    return <div className="bg-yellow-300 w-[20vw] h-[80vh] m-6 flex flex-col justify-between p-3 rounded-xl relative">
         <img className="h-[50vh]" src={book.image} />
         
         <button onClick={() => handleAddToCart(book)} className="bg-white w-[7.5vw] h-[5vh] absolute top-82 right-5 rounded-md cursor-pointer hover:scale-105 hover:font-semibold">Add to Cart</button>
