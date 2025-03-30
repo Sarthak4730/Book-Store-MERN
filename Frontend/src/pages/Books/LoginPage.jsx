@@ -2,23 +2,42 @@ import { Link } from "react-router";
 import Navbar from "../../components/Navbar";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
+import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 const LoginPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
+    const { loginUser } = useAuth();
+    const navigate = useNavigate();
+    const [errorMessage, setErrorMessage] = useState("");
+
     const {
         register,
         handleSubmit,
         watch,
         formState: { errors },
     } = useForm();
-    const onSubmit = (data) => console.log(data);
     
     // const handleGoogleSignIn = () => {}
+    
+    const onSubmit = async (data) => {
+        console.log(data);
+        try {
+            await loginUser(data.email, data.password);
+            alert("Login Successful");
+            navigate("/");
+        } catch (error) {
+            console.log("invalid email and/or password");
+            console.log(error);
+            setErrorMessage("Invalid Email and/or Password");
+        }
+    }
 
     return <>
         <Navbar count={cartItems.length} />
         
-        <form onSubmit={handleSubmit(onSubmit)} className="border-2 border-gray-300 w-[30vw] h-[60vh] mx-auto mt-[20vh] p-10 flex flex-col justify-between items-start rounded-md">
+        <form onSubmit={handleSubmit(onSubmit)} className="border-2 border-gray-300 w-[30vw] h-[70vh] mx-auto mt-[20vh] p-10 flex flex-col justify-between items-start rounded-md">
             <h1 className="text-2xl font-bold mb-4">Please Login</h1>
 
             <label className="text-lg font-bold" htmlFor="email">Email</label>
@@ -27,7 +46,9 @@ const LoginPage = () => {
             <label className="text-lg font-bold" htmlFor="password">Password</label>
             <input {...register("password", { required: true })} className="border-2 border-gray-300 w-[25vw] p-2 rounded-md" type="password" id="password" placeholder="Password"/>
             
-            <button className="cursor-pointer bg-blue-500 w-[5vw] h-[5vh] text-white font-bold rounded-md mt-4" type="submit">Login</button>
+            { errorMessage && <h3 className="text-red-500 mt-4"> {errorMessage} </h3> }
+
+            <button className="cursor-pointer bg-blue-500 w-[5vw] h-[5vh] text-white font-bold rounded-md my-4" type="submit">Login</button>
             
             <p>Don't have an account? Please <Link to="/register" className="text-blue-500 font-bold">Register</Link> </p>
             

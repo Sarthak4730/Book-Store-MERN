@@ -3,10 +3,12 @@ import Navbar from "../../components/Navbar";
 import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
+import { useNavigate } from 'react-router-dom';
 
 const RegisterPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
     const { registerUser } = useAuth();
+    const navigate = useNavigate();
 
     const {
         register,
@@ -20,8 +22,10 @@ const RegisterPage = () => {
         try {
             await registerUser(data.email, data.password);
             alert("Registration Successful");
+            navigate("/login");
         } catch (error) {
             console.log("invalid email and/or password");
+            console.log(error);
         }
     }
 
@@ -30,7 +34,7 @@ const RegisterPage = () => {
     return <>
         <Navbar count={cartItems.length} />
         
-        <form onSubmit={handleSubmit(onSubmit)} className="border-2 border-gray-300 w-[30vw] h-[60vh] mx-auto mt-[20vh] p-10 flex flex-col justify-between items-start rounded-md">
+        <form onSubmit={handleSubmit(onSubmit)} className="border-2 border-gray-300 w-[30vw] h-[70vh] mx-auto mt-[20vh] p-10 flex flex-col justify-between items-start rounded-md">
             <h1 className="text-2xl font-bold mb-4">Please Register</h1>
 
             <label className="text-lg font-bold" htmlFor="email">Email</label>
@@ -39,8 +43,8 @@ const RegisterPage = () => {
             <label className="text-lg font-bold" htmlFor="password">Password</label>
             <input {...register("password", { required: true })} className="border-2 border-gray-300 w-[25vw] p-2 rounded-md" type="password" id="password" placeholder="Password"/>
             
-            <button className="cursor-pointer bg-blue-500 w-[5vw] h-[5vh] text-white font-bold rounded-md mt-4" type="submit">Register</button>
-            
+            <button className="cursor-pointer bg-blue-500 w-[5vw] h-[5vh] text-white font-bold rounded-md my-4" type="submit">Register</button>
+        
             <p>Have an account? Please <Link to="/login" className="text-blue-500 font-bold">Login</Link> </p>
             
             {/* <button onClick={handleGoogleSignIn} */}            
