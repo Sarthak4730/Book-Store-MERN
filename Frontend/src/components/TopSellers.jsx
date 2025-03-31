@@ -13,7 +13,7 @@ const TopSellers = () => {
   
   const categories = ["Choose a category", "absurdist", "adventure", "anthropology", "astrophysics", "autobiography", "bildungsroman", "children", "coming of age", "cosmology", "essay", "fantasy", "family saga", "fiction", "gothic", "history", "horror", "jewish", "literature", "magic", "manual", "memoir", "mystery", "non fiction", "novel", "novella", "philosophy", "realism", "realist", "romance", "romantic", "science", "self help", "socialist", "thriller", "war", "young adult"];
 
-  const sortFiltersOptions = ["Choose sort type", "Price: Low to high", "Price: High to low"];
+  const sortFiltersOptions = ["Choose sort type", "Price: Low to high", "Price: High to low", "Year: New to old", "Year: Old to new"];
 
   
   const sortedBooks = useMemo(() => {
@@ -32,6 +32,20 @@ const TopSellers = () => {
       categoryFiltered.sort((a, b) => {
         const priceA = parseInt(a.price.replace("₹", ""), 10);
         const priceB = parseInt(b.price.replace("₹", ""), 10);
+        return priceB - priceA;
+      } );
+    }
+    else if(sortFilter === "Year: Old to new"){
+      categoryFiltered.sort((a, b) => {
+        const priceA = parseInt(a.first_published, 10);
+        const priceB = parseInt(b.first_published, 10);
+        return priceA - priceB;
+      } );
+    }
+    else if(sortFilter === "Year: New to old"){
+      categoryFiltered.sort((a, b) => {
+        const priceA = parseInt(a.first_published, 10);
+        const priceB = parseInt(b.first_published, 10);
         return priceB - priceA;
       } );
     }
