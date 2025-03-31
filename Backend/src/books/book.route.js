@@ -6,7 +6,7 @@ const Book = require('./book.model');
 router.get('/', async (req, res) => {
     try {
         const books = await Book.find();
-        console.log("Success getting books");
+        // console.log("Success getting books");
         res.status(200).send( { message: "Books fetched successfully", books: books } );
     } catch (error) {
         console.error("Error getting books: ", error);
