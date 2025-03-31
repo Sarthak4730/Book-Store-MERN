@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import CartCard from "./CartCard";
 import { useSelector, useDispatch } from "react-redux";
 import { clearCart } from "../../redux/features/cart/cartSlice";
+import { Link } from 'react-router-dom'
 
 const CartPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
@@ -41,10 +42,20 @@ const CartPage = () => {
                             <h3 className="text-3xl font-bold [text-shadow:3px_3px_5px_rgba(0,0,0,0.3)]"> ₹{ removeRupeeTotal() } </h3>
                         </div>
                         
-                        <button className='bg-green-400 w-[78vw] h-[8vh] text-xl font-semibold rounded-md cursor-pointer hover:bg-black hover:text-yellow-300'>Checkout</button>
+                        <Link to="/checkout">
+                            <button className='bg-green-400 w-[78vw] h-[8vh] text-xl font-semibold rounded-md cursor-pointer hover:bg-black hover:text-yellow-300'>Checkout</button>
+                        </Link>
                     </div>
                 </div>
-            :   <h1 className="ml-[32vw] mt-[46vh] text-5xl font-semibold"> No products added to cart </h1>
+            :   <div className="w-[50vw] h-[30vh] mx-auto mt-[40vh] flex flex-col justify-evenly items-center">
+                    <h1 className="text-5xl font-semibold"> No products added to cart </h1> 
+                    
+                    <Link to="/">
+                        <div className="cart-div w-[7vw] h-[6vh] bg-yellow-400 text-xl font-semibold flex justify-center items-center rounded-md py-1 hover:scale-115">
+                            Back
+                        </div>
+                    </Link>
+                </div>
         }
     </>
 }

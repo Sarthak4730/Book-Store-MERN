@@ -1,11 +1,20 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
+
+import { useDispatch } from "react-redux";
+import { clearCart } from "../redux/features/cart/cartSlice";
+
 
 const Navbar = ( { count } ) => {
   const { currentUser, logout } = useAuth(null);
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
 
   const handleLogOut = () => {
     logout();
+    navigate("/");
+    dispatch( clearCart() );
   }
 
   return(

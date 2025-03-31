@@ -27,7 +27,7 @@ const TopSellers = () => {
 
   return (
     <div className='w-[94vw] mx-auto flex flex-col items-center'>
-      <h1 className='text-3xl'>Top Sellers</h1>
+      <h1 className='text-3xl font-semibold'>Top Sellers</h1>
       
       <select onChange={ e => setSelectedCategory(e.target.value) } className="w=[20vw] bg-yellow-300 my-2.5 p-2 rounded-xl font-semibold cursor-pointer hover:bg-black hover:text-yellow-300" name="category" id="category">
         {
