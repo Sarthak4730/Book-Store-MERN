@@ -5,9 +5,11 @@ import { useAuth } from "../../context/AuthContext";
 import { useForm } from "react-hook-form";
 import { useCreateOrderMutation } from "../../redux/features/orders/ordersApi";
 import Swal from 'sweetalert2';
+import { useNavigate } from "react-router";
 
 const CartPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
+    const navigate = useNavigate();
     
     const { currentUser } = useAuth(null);
     const {
@@ -60,6 +62,7 @@ const CartPage = () => {
                 icon: "success",
                 title: `Success in placing order`
             });
+            navigate('/orders');
         } catch (error) {
             console.error("Error sending newOrder to backend\n", error);
             // alert("Failed to place order");
