@@ -18,7 +18,7 @@ router.post('/create-book', async (req, res) => {
     try {
         const newBook = await Book( { ...req.body } );
         await newBook.save();
-        console.log("Success creating book");
+        // console.log("Success creating book");
         res.status(200).send( { message: "Book posted successfully", book: newBook } );
     } catch (error) {
         console.error("Error creating book: ", error);
@@ -31,7 +31,7 @@ router.get('/get-specific-book/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const book = await Book.findById(id);
-        console.log("Success getting the book");
+        // console.log("Success getting the book");
         if( !book ) res.status(404).send( { message: "Book Not Found: this book does not exist" } );
         else res.status(200).send( { message: "Book fetched successfully", book: book } );
     } catch (error) {
@@ -44,7 +44,7 @@ router.put('/update-book/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const updatedBook = await Book.findByIdAndUpdate( id, req.body, { new: true } );
-        console.log("Success updating the book");
+        // console.log("Success updating the book");
         if( !updatedBook ) res.status(404).send( { message: "Book Not Found: this book does not exist, hence cannot be updated" } );
         else res.status(200).send( { message: "Book updated successfully", updatedBook } );
     } catch (error) {
@@ -57,7 +57,7 @@ router.delete('/delete-book/:id', async (req, res) => {
     try {
         const { id } = req.params;
         const book = await Book.findByIdAndDelete(id);
-        console.log("Success deleting the book");
+        // console.log("Success deleting the book");
         if( !book ) res.status(404).send( { message: "Book Not Found: this book does not exist, hence cannot be deleted" } );
         else res.status(200).send( { message: "Book deleted successfully" } );
     } catch (error) {
