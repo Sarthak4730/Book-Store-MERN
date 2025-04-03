@@ -4,7 +4,7 @@ const BelowNavbar = () => {
       <div className="left w-[40vw] flex flex-col justify-center">
         <h1 className='text-3xl'>New Releases This Week</h1>
         <p className='w-[25vw] my-7 text-gray-700'>It's time to update your reading list with some of the latest and greatest releases in the literary world. From heart-pumping thrillers to captivating memoirs, this week's new releases offer something for everyone</p>
-        <button className='bg-yellow-300 w-[10vw] h-[4vh] text-sm font-bold rounded-md cursor-pointer hover:bg-black hover:text-yellow-300'>Subscribe</button>
+        
       </div>
 
       <div className="right w-[40vw] flex justify-center items-center relative">
