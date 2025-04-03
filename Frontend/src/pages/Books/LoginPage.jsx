@@ -57,7 +57,7 @@ const LoginPage = () => {
             
             { errorMessage && <h3 className="text-red-500 mt-4"> {errorMessage} </h3> }
 
-            <button className="cursor-pointer bg-blue-500 w-[5vw] h-[5vh] text-white font-bold rounded-md my-4" type="submit">Login</button>
+            <button className="cursor-pointer bg-blue-500 w-[5vw] h-[5vh] text-white font-bold rounded-md my-4 hover:scale-110" type="submit">Login</button>
             
             <p>Don't have an account? Please <Link to="/register" className="text-blue-500 font-bold">Register</Link> </p>
             

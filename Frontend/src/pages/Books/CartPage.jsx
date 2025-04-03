@@ -42,9 +42,14 @@ const CartPage = () => {
                             <h3 className="text-3xl font-bold [text-shadow:3px_3px_5px_rgba(0,0,0,0.3)]"> ₹{ removeRupeeTotal() } </h3>
                         </div>
                         
-                        <Link to="/checkout">
-                            <button className='bg-green-400 w-[78vw] h-[8vh] text-xl font-semibold rounded-md cursor-pointer hover:bg-black hover:text-yellow-300'>Checkout</button>
-                        </Link>
+                        <div className="buttons-div flex justify-evenly">
+                            <Link to="/checkout">
+                                <button className='bg-green-400 w-[35vw] h-[8vh] text-xl font-semibold rounded-md cursor-pointer hover:scale-110'>Checkout</button>
+                            </Link>
+                            <Link to="/">
+                                <button className="cart-div w-[35vw] h-[8vh] bg-yellow-400 text-xl font-semibold flex justify-center items-center rounded-md py-1 hover:scale-110">Continue Shopping</button>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             :   <div className="w-[50vw] h-[30vh] mx-auto mt-[40vh] flex flex-col justify-evenly items-center">
