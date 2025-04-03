@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 
 const Book = require('./book.model');
+const verifyAdminToken = require('../middleware/verifyAdminToken');
+
 
 router.get('/', async (req, res) => {
     try {
@@ -14,7 +16,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.post('/create-book', async (req, res) => {
+router.post('/create-book', verifyAdminToken, async (req, res) => {
     try {
         const newBook = await Book( { ...req.body } );
         await newBook.save();
@@ -40,7 +42,7 @@ router.get('/get-specific-book/:id', async (req, res) => {
     }
 });
 
-router.put('/update-book/:id', async (req, res) => {
+router.put('/update-book/:id', verifyAdminToken, async (req, res) => {
     try {
         const { id } = req.params;
         const updatedBook = await Book.findByIdAndUpdate( id, req.body, { new: true } );
@@ -53,7 +55,7 @@ router.put('/update-book/:id', async (req, res) => {
     }
 });
 
-router.delete('/delete-book/:id', async (req, res) => {
+router.delete('/delete-book/:id', verifyAdminToken, async (req, res) => {
     try {
         const { id } = req.params;
         const book = await Book.findByIdAndDelete(id);
