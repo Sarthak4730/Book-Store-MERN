@@ -31,6 +31,25 @@ const router = createBrowserRouter([
     {
         path: '/orders',
         element: <Orders />
+    },
+    
+    {
+        path: '/dashboard',
+        element: <div>Dashboard</div>,
+        children: [
+            {
+                path: 'add-new-book',
+                element: <div>AddNewBook</div>
+            },
+            {
+                path: 'edit-book/:id',
+                element: <div>EditBook</div>
+            },
+            {
+                path: 'manage-books',
+                element: <div>ManageBooks</div>
+            },
+        ]
     }
 ])
 

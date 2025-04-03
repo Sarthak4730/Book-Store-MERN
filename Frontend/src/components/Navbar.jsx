@@ -8,7 +8,6 @@ import { useState } from "react";
 
 const Navbar = ( { count } ) => {
   const { currentUser, logout } = useAuth(null);
-  const [isLoaded, setIsLoaded] = useState(false);
 
   const navigate = useNavigate();
 
@@ -19,6 +18,11 @@ const Navbar = ( { count } ) => {
     navigate("/");
     dispatch( clearCart() );
   }
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigation = [
+    {name: 'Orders', href: '/orders'}
+  ]
 
   return(
     <nav className="flex justify-between items-center h-[7.5vh] w-[100vw] fixed top-0 px-10 bg-white z-10">
@@ -38,7 +42,23 @@ const Navbar = ( { count } ) => {
               ? <img src={currentUser.photoURL} alt="pfp" onLoad={() => setIsLoaded(true)} style={{ display: isLoaded ? "block" : "none" }} className="hover:scale-115 w-[30px] h-[30px] rounded-full" />
               : <svg className="mt-1 hover:scale-115" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><g fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path strokeDasharray={20} strokeDashoffset={20} d="M12 5c1.66 0 3 1.34 3 3c0 1.66 -1.34 3 -3 3c-1.66 0 -3 -1.34 -3 -3c0 -1.66 1.34 -3 3 -3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"></animate></path><path strokeDasharray={36} strokeDashoffset={36} d="M12 14c4 0 7 2 7 3v2h-14v-2c0 -1 3 -3 7 -3Z"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.5s" values="36;0"></animate></path></g></svg> }
           </Link> */}
-          { currentUser && <img src={currentUser.photoURL} alt="pfp" onLoad={() => setIsLoaded(true)} style={{ display: isLoaded ? "block" : "none" }} className="hover:scale-115 w-[30px] h-[30px] rounded-full" /> }
+          { currentUser && <img src={currentUser.photoURL} alt="pfp" className="hover:scale-115 w-[30px] h-[30px] rounded-full" /> }
+
+          {
+            isDropdownOpen && (
+              <div>
+                <ul>
+                  {
+                    navigation.map( (item, index) => {
+                      <li key={index}>
+                        <Link to={item.href}>{item.name}</Link>
+                      </li>
+                    } )
+                  }
+                </ul>
+              </div>
+            )
+          }
 
           { currentUser && <button onClick={handleLogOut} className="w-[4.5vw] bg-red-500 text-white font-bold flex justify-center items-center rounded-md py-1 hover:scale-110 cursor-pointer"> Logout </button>}
           
