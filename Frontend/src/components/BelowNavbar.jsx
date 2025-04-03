@@ -3,7 +3,7 @@ const BelowNavbar = () => {
     <div className='w-[80vw] h-[50vh] mx-auto mt-10 flex'>
       <div className="left w-[40vw] flex flex-col justify-center">
         <h1 className='text-3xl'>New Releases This Week</h1>
-        <p className='w-[25vw] my-7 text-gray-700'>It's time to update your reading list with some of the latest and greatest releases in the literary world. From heart-pumping thrillers to captivating memoirs, this week's new releases offer something for everyone</p>
+        <p className='w-[25vw] my-7 text-gray-700'>It's time to update your reading list with some of the latest and greatest releases in the literary world. From heart-pumping thrillers to captivating memoirs, this week's new releases offer something for everyone.</p>
         
       </div>
 
