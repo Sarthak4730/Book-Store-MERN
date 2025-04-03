@@ -29,6 +29,7 @@ const Navbar = ( { count } ) => {
     logout();
     navigate("/");
     dispatch( clearCart() );
+    setIsDropdownOpen(!isDropdownOpen);
   }
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -50,29 +51,30 @@ const Navbar = ( { count } ) => {
             </div>
         </div>
 
-        <div className={`right flex ${ currentUser ? 'w-[16vw]' : 'w-[8vw]' } justify-between`}>
-          <button onClick={ () => setIsDropdownOpen( prev => !prev ) } className="hover:scale-115 cursor-pointer w-[30px] h-[30px] rounded-full">
+        <div className={`right flex w-[8vw] justify-between`}>
+          { currentUser && ( <button onClick={ () => setIsDropdownOpen(!isDropdownOpen) } className="hover:scale-115 cursor-pointer w-[30px] h-[30px]">
           { currentUser
           ? <img src={photoURL} alt="pfp" />
           : <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><g fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path strokeDasharray={20} strokeDashoffset={20} d="M12 5c1.66 0 3 1.34 3 3c0 1.66 -1.34 3 -3 3c-1.66 0 -3 -1.34 -3 -3c0 -1.66 1.34 -3 3 -3Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.4s" values="20;0"></animate></path><path strokeDasharray={36} strokeDashoffset={36} d="M12 14c4 0 7 2 7 3v2h-14v-2c0 -1 3 -3 7 -3Z"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.5s" values="36;0"></animate></path></g></svg> }
-          </button>
+          </button> ) }
           {
             isDropdownOpen && (
-              <div>
-                <ul>
-                  {
-                    navigation.map( (item, index) => {
-                      <li key={index}>
-                        <Link to={item.href}>{item.name}</Link>
-                      </li>
-                    } )
-                  }
-                </ul>
-              </div>
+              <ul className="border-2 border-yellow-400 w-[6vw] h-[12vh] flex flex-col justify-between absolute top-[7vh] right-[16vh]">
+                {
+                  navigation.map( (item, index) => (
+                    <li className="w-full hover:bg-yellow-400 cursor-pointer" key={index}>
+                      { item.href === "/logout"
+                      ? <button onClick={handleLogOut} className="cursor-pointer">{item.name}</button>
+                      : <Link to={item.href}>{item.name}</Link>
+                      }
+                    </li>
+                   ) )
+                }
+              </ul>
             )
           }
 
-          { currentUser && <button onClick={handleLogOut} className="w-[4.5vw] bg-red-500 text-white font-bold flex justify-center items-center rounded-md py-1 hover:scale-110 cursor-pointer"> Logout </button>}
+          {/* { currentUser && <button onClick={handleLogOut} className="w-[4.5vw] bg-red-500 text-white font-bold flex justify-center items-center rounded-md py-1 hover:scale-110 cursor-pointer"> Logout </button>} */}
           
           {/* <svg  className="mt-1" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><path fill="none" stroke="#000" strokeDasharray={32} strokeDashoffset={32} strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c0 0 0 0 -0.76 -1c-0.88 -1.16 -2.18 -2 -3.74 -2c-2.49 0 -4.5 2.01 -4.5 4.5c0 0.93 0.28 1.79 0.76 2.5c0.81 1.21 8.24 9 8.24 9M12 8c0 0 0 0 0.76 -1c0.88 -1.16 2.18 -2 3.74 -2c2.49 0 4.5 2.01 4.5 4.5c0 0.93 -0.28 1.79 -0.76 2.5c-0.81 1.21 -8.24 9 -8.24 9"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.7s" values="32;0"></animate></path></svg> */}
           
