@@ -6,6 +6,8 @@ import Cart from '../pages/Books/CartPage'
 import Checkout from '../pages/Books/Checkout'
 import PrivateRoute from '../routers/PrivateRoute'
 import Orders from '../pages/Books/OrdersPage'
+import AdminRoute from './AdminRoute'
+import AdminPage from '../pages/Books/AdminPage'
 
 const router = createBrowserRouter([
     {
@@ -32,10 +34,15 @@ const router = createBrowserRouter([
         path: '/orders',
         element: <Orders />
     },
+
+    {
+        path: '/admin',
+        element: <AdminPage />
+    },
     
     {
         path: '/dashboard',
-        element: <div>Dashboard</div>,
+        element: <AdminRoute> <div>Dashboard</div> </AdminRoute>,
         children: [
             {
                 path: 'add-new-book',

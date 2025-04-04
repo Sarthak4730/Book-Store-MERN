@@ -1,13 +1,10 @@
 import { Link } from "react-router";
-import Navbar from "../../components/Navbar";
-import { useSelector } from "react-redux";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from 'react-router-dom';
 import { useState } from "react";
 
 const LoginPage = () => {
-    const cartItems = useSelector(state => state.cart.cartItems);
     const { loginUser, signInWithGoogle } = useAuth();
     const navigate = useNavigate();
     const [errorMessage, setErrorMessage] = useState("");
@@ -43,10 +40,8 @@ const LoginPage = () => {
         }
     }
 
-    return <>
-        <Navbar count={cartItems.length} />
-        
-        <form onSubmit={handleSubmit(onSubmit)} className="border-2 border-gray-300 w-[30vw] h-[70vh] mx-auto mt-[20vh] p-10 flex flex-col justify-between items-start rounded-md">
+    return <>        
+        <form onSubmit={handleSubmit(onSubmit)} className="border-2 border-gray-300 w-[30vw] h-[70vh] mx-auto mt-[15vh] p-10 flex flex-col justify-between items-start rounded-md">
             <h1 className="text-2xl font-bold mb-4">Please Login</h1>
 
             <label className="text-lg font-bold" htmlFor="email">Email</label>
