@@ -15,7 +15,7 @@ router.post('/admin', async (req, res) => {
         
         if(admin.password !== password) return res.status(401).send( { message: 'Invalid Password' } ); 
 
-        const token = jwt.sign( {id: admin._id, username: admin.username, role: admin.role}, JWT_SECRET_KEY, { expiresIn: '1h' } );
+        const token = jwt.sign( {id: admin._id, username: admin.username, role: admin.role}, JWT_SECRET_KEY, { expiresIn: '10m' } );
         return res.status(200).json( { message: 'admin authentication success', token, user: { username: admin.username, role: admin.role } } );
     } catch (error) {
         console.error('Failed at post/admin', error);

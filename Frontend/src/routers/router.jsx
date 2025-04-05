@@ -55,10 +55,6 @@ const router = createBrowserRouter([
     {
         path: '/dashboard/edit-book/:id',
         element: <div>EditBook</div>
-    },
-    {
-        path: '/dashboard/manage-books',
-        element: <div>ManageBooks</div>
     }
 ])
 

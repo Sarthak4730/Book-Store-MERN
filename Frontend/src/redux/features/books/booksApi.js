@@ -20,9 +20,20 @@ const booksApi = createApi({
         fetchAllBooks: builder.query({
             query: () => '/',
             providesTags: ['Books']
-        })
+        }),
+        deleteBook: builder.mutation ({
+            query: (id) => ({
+                url: `/delete-book/${id}`,
+                method: 'DELETE',
+                credentials: 'include',
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem("token")}`,
+                }
+            }),
+            invalidatesTags: ['Books']
+        }),
     })
 });
 
-export const { useFetchAllBooksQuery } = booksApi;
+export const { useFetchAllBooksQuery, useDeleteBookMutation } = booksApi;
 export default booksApi;

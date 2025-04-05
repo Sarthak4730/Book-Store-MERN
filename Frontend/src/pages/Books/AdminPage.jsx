@@ -24,7 +24,6 @@ const AdminPage = () => {
                 }
             });
             const auth = response.data;
-            console.log(auth);
             setErrorMessage(false);
             
             if(auth.token){

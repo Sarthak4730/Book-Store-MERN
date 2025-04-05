@@ -8,11 +8,11 @@ router.get("/", async (req, res) => {
     try {
         const totalOrders = await Order.countDocuments();
 
-        const totalSales = await Order.aggregate([
+        const totalValue = await Order.aggregate([
             {
                 $group: {
                     _id: null,
-                    totalSales: { $sum: "$totalPrice" }
+                    totalValue: { $sum: "$totalPrice" }
                 }
             }
         ]);
@@ -21,7 +21,7 @@ router.get("/", async (req, res) => {
 
         res.status(200).json({
             totalOrders,
-            totalSales: totalSales[0]?.totalSales,
+            totalValue: totalValue[0]?.totalValue,
             totalBooks
         })
     } catch (error) {
