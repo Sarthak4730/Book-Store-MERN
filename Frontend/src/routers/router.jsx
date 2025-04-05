@@ -1,13 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom'
 import App from '../App'
+
 import Login from '../pages/Books/LoginPage'
 import Register from '../pages/Books/RegisterPage'
 import Cart from '../pages/Books/CartPage'
 import Checkout from '../pages/Books/Checkout'
-import PrivateRoute from '../routers/PrivateRoute'
 import Orders from '../pages/Books/OrdersPage'
-import AdminRoute from './AdminRoute'
 import AdminPage from '../pages/Books/AdminPage'
+
+import PrivateRoute from '../routers/PrivateRoute'
+import AdminRoute from './AdminRoute'
+
+import Dashboard from '../pages/Dashboard/Dashboard'
 
 const router = createBrowserRouter([
     {
@@ -42,21 +46,19 @@ const router = createBrowserRouter([
     
     {
         path: '/dashboard',
-        element: <AdminRoute> <div>Dashboard</div> </AdminRoute>,
-        children: [
-            {
-                path: 'add-new-book',
-                element: <div>AddNewBook</div>
-            },
-            {
-                path: 'edit-book/:id',
-                element: <div>EditBook</div>
-            },
-            {
-                path: 'manage-books',
-                element: <div>ManageBooks</div>
-            },
-        ]
+        element: <AdminRoute> <Dashboard /> </AdminRoute>
+    },
+    {
+        path: '/dashboard/add-new-book',
+        element: <div>AddNewBook</div>
+    },
+    {
+        path: '/dashboard/edit-book/:id',
+        element: <div>EditBook</div>
+    },
+    {
+        path: '/dashboard/manage-books',
+        element: <div>ManageBooks</div>
     }
 ])
 

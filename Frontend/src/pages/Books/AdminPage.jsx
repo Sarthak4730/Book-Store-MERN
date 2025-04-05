@@ -39,9 +39,9 @@ const AdminPage = () => {
             alert('Logged In Successfully');
             navigate('/dashboard');
         } catch (error) {
-            console.log("invalid password");
+            console.log("incorrect password");
             console.log(error);
-            setErrorMessage("invalid password");
+            setErrorMessage("Incorrect Password");
         }
     }
 
