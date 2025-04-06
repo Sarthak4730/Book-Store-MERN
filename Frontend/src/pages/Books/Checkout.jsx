@@ -1,4 +1,3 @@
-import Navbar from "../../components/Navbar";
 import { useSelector } from "react-redux";
 
 import { useAuth } from "../../context/AuthContext";
@@ -73,9 +72,7 @@ const CartPage = () => {
         }
     }
 
-    return <>
-        <Navbar count={cartItems.length} />
-        
+    return <>        
         <div className="container mt-[15vh] flex justify-evenly">
             <div className="top">
                 <p className="text-2xl font-bold">Cash On Delivery</p>

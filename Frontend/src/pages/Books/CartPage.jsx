@@ -1,4 +1,3 @@
-import Navbar from "../../components/Navbar";
 import CartCard from "./CartCard";
 import { useSelector, useDispatch } from "react-redux";
 import { clearCart } from "../../redux/features/cart/cartSlice";
@@ -15,9 +14,7 @@ const CartPage = () => {
         return rupeeRemoved.reduce( (sum, i) => sum + i, 0 );
     }
 
-    return <>
-        <Navbar count={cartItems.length} />
-        
+    return <>        
         {
             cartItems.length > 0
             ?   <div className="box mx-auto mt-[10vh] w-[80vw] h-[86vh] px-5 py-5 flex flex-col justify-between border-2 rounded-md border-black">

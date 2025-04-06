@@ -77,16 +77,17 @@ const Navbar = ( { count } ) => {
           </button> ) }
           {
             isDropdownOpen && (
-              <ul className="border-2 border-yellow-400 w-[6vw] h-[12vh] flex flex-col justify-between absolute top-[7vh] right-[16vh]">
+              <ul className="border-2 border-yellow-400 w-[7vw] h-[12vh] flex flex-col justify-between absolute top-[7vh] right-[16vh]">
                 {
                   navigation.map( (item, index) => (
-                    <li className="w-full hover:bg-yellow-400 cursor-pointer" key={index}>
-                      { item.href === "/logout"
-                      ? <button onClick={handleLogOut} className="cursor-pointer">{item.name}</button>
-                      : <Link to={item.href}>{item.name}</Link>
-                      }
-                    </li>
-                   ) )
+                    item.href === "/logout" 
+                    ? <button onClick={handleLogOut} className="cursor-pointer text-start">
+                        <li className="w-full hover:bg-yellow-400 cursor-pointer pl-2" key={index}>{item.name}</li>
+                      </button>
+                    : <Link to={item.href}>
+                        <li className="w-full hover:bg-yellow-400 cursor-pointer pl-2" key={index}>{item.name}</li>
+                      </Link>
+                  ) )
                 }
               </ul>
             )

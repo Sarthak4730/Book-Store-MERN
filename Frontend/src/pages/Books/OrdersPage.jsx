@@ -26,7 +26,8 @@ const OrdersPage = () => {
                 ? ( <p className="text-xl font-semibold my-[3vh]">No orders yet.</p> )
                 : ( <div className="div-of-uls w-full my-[3vh] flex flex-col">
                         { orders.map( (o, index) => ( <ul>
-                            <li className="flex flex-col justify-between h-[40vh] p-4 border-t-2 border-b-2 border-yellow-400" key={index}>
+                            <li className="flex flex-col justify-between h-[45vh] p-4 border-t-2 border-b-2 border-yellow-400" key={index}>
+                                <p><span className="font-bold text-xl text-white bg-black p-2 rounded-full">#{index+1}</span></p>
                                 <p><span className="font-bold">OrderId:</span> {o._id}</p>
                                 <p><span className="font-bold">Name:</span> {o.name}</p>
                                 {/* <p><span className="font-bold">Email:</span> {o?.email}</p> */}
