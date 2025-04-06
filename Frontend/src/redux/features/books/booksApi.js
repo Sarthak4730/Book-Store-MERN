@@ -32,8 +32,21 @@ const booksApi = createApi({
             }),
             invalidatesTags: ['Books']
         }),
+        addBook: builder.mutation ({
+            query: (data) => ({
+                url: '/create-book',
+                method: 'POST',
+                body: data,
+                credentials: 'include',
+                headers: {
+                    'Authorization': `Bearer ${localStorage.getItem("token")}`,
+                    'Content-Type': 'application/json',
+                }
+            }),
+            invalidatesTags: ['Books']
+        })
     })
 });
 
-export const { useFetchAllBooksQuery, useDeleteBookMutation } = booksApi;
+export const { useFetchAllBooksQuery, useDeleteBookMutation, useAddBookMutation } = booksApi;
 export default booksApi;

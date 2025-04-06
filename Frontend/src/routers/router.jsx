@@ -12,6 +12,7 @@ import PrivateRoute from '../routers/PrivateRoute'
 import AdminRoute from './AdminRoute'
 
 import Dashboard from '../pages/Dashboard/Dashboard'
+import AddNewBook from '../pages/Dashboard/AddNewBook'
 
 const router = createBrowserRouter([
     {
@@ -50,7 +51,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard/add-new-book',
-        element: <div>AddNewBook</div>
+        element: <AddNewBook />
     },
     {
         path: '/dashboard/edit-book/:id',

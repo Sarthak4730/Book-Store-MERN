@@ -7,7 +7,6 @@ import { useState, useEffect } from "react";
 
 import Swal from 'sweetalert2';
 
-
 const Navbar = ( { count } ) => {
   const { currentUser, logout } = useAuth(null);
 
@@ -47,7 +46,7 @@ const Navbar = ( { count } ) => {
     Toast.fire({
       icon: "success",
       title: `${currentUser.providerData[0].email} Logged Out Successfully`
-  });
+    });
   }
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
@@ -81,10 +80,10 @@ const Navbar = ( { count } ) => {
                 {
                   navigation.map( (item, index) => (
                     item.href === "/logout" 
-                    ? <button onClick={handleLogOut} className="cursor-pointer text-start">
+                    ? <button key={index} onClick={handleLogOut} className="cursor-pointer text-start">
                         <li className="w-full hover:bg-yellow-400 cursor-pointer pl-2" key={index}>{item.name}</li>
                       </button>
-                    : <Link to={item.href}>
+                    : <Link key={index} to={item.href}>
                         <li className="w-full hover:bg-yellow-400 cursor-pointer pl-2" key={index}>{item.name}</li>
                       </Link>
                   ) )

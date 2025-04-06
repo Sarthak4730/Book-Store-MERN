@@ -4,6 +4,7 @@ import Loader from "../../components/Loader";
 import { useNavigate } from "react-router";
 import { useDeleteBookMutation, useFetchAllBooksQuery } from "../../redux/features/books/booksApi";
 import { Link } from 'react-router-dom';
+import Swal from 'sweetalert2';
 
 const Dashboard = () => {
     const [data, setData] = useState("nothing yet");
@@ -36,10 +37,26 @@ const Dashboard = () => {
 
     if(loading) return <Loader />
 
+    const Toast = Swal.mixin({
+        toast: true,
+        position: "top",
+        showConfirmButton: false,
+        timer: 1500,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+    });
+
     const handleDelete = async (id) => {
         try {
             await deleteBook(id).unwrap();
-            alert("Book successfully deleted");
+            // alert("Book successfully deleted");
+            Toast.fire({
+                icon: "success",
+                title: "Book successfully deleted"
+            });
             refetch();
         } catch (error) {
             console.error("Failed to delete book", error);

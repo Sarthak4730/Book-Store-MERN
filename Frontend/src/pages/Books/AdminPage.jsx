@@ -32,7 +32,7 @@ const AdminPage = () => {
                    localStorage.removeItem('token');
                    alert('Token has expired. Please login again');
                    navigate('/admin');
-                }, 60*60*1000);
+                }, 10*60*1000);     // 10 mins
             }
 
             alert('Logged In Successfully');
