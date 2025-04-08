@@ -2,6 +2,7 @@ import Navbar from "../../components/Navbar";
 import { useSelector } from "react-redux";
 import { useGetOrdersByEmailQuery } from "../../redux/features/orders/ordersApi";
 import { useAuth } from "../../context/AuthContext";
+import Loader from "../../components/Loader";
 
 const OrdersPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
@@ -9,6 +10,7 @@ const OrdersPage = () => {
     // console.log("currentUser: ", currentUser);
     
     const { data, isLoading, isError } = useGetOrdersByEmailQuery(currentUser?.email);
+    if(isLoading) return <Loader />
     // console.log("data", data);
     const orders = data?.orders || [];
     // console.log("orders", orders);

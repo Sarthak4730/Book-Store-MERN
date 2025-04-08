@@ -13,6 +13,7 @@ import AdminRoute from './AdminRoute'
 
 import Dashboard from '../pages/Dashboard/Dashboard'
 import AddNewBook from '../pages/Dashboard/AddNewBook'
+import EditBook from '../pages/Dashboard/EditBook'
 
 const router = createBrowserRouter([
     {
@@ -55,7 +56,7 @@ const router = createBrowserRouter([
     },
     {
         path: '/dashboard/edit-book/:id',
-        element: <div>EditBook</div>
+        element: <EditBook />
     }
 ])
 

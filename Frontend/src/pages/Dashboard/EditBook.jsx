@@ -1,20 +1,56 @@
 import { useForm } from "react-hook-form";
-import { useAddBookMutation } from "../../redux/features/books/booksApi";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Swal from 'sweetalert2';
+import { useFetchOneBookQuery, useUpdateBookMutation } from "../../redux/features/books/booksApi";
+import { useEffect } from "react";
+import Loader from "../../components/Loader";
 
-const AddNewBook = () => {
+const EditBook = () => {
+    const { id } = useParams();
+    const { data, isLoading, error } = useFetchOneBookQuery(id);
+    const oldData = data?.book;
+    const [ updateBook ] = useUpdateBookMutation();
+    
+    const navigate = useNavigate();
+    
     const {
         register,
         handleSubmit,
         watch,
         setValue,
+        reset,
         formState: { errors },
-    } = useForm();
-
-    const navigate = useNavigate();
-
-    const [ addBook ] = useAddBookMutation();
+    } = useForm({
+        defaultValues: {
+            title: "",
+            author: "",
+            original_language: "",
+            first_published: "",
+            approximate_sales: "",
+            genre: "",
+            image: "",
+            price: "",
+        },
+        shouldUnregister: true
+    });
+    
+    useEffect( () => {
+        if( oldData ) {
+            reset({
+                title: oldData.title,
+                author: oldData.author,
+                original_language: oldData.original_language,
+                first_published: oldData.first_published,
+                approximate_sales: oldData.approximate_sales,
+                genre: oldData.genre,
+                image: oldData.image,
+                price: oldData.price
+            });
+            console.log(oldData);
+        }
+    }, [ oldData, reset ] );
+    
+    if( isLoading ) return <Loader />
 
     const Toast = Swal.mixin({
         toast: true,
@@ -29,24 +65,21 @@ const AddNewBook = () => {
     });
 
     const onSubmit = async (data) => {
-        console.log("data:", data);
-        
         try {
-            await addBook(data).unwrap();
+            await updateBook( { id, data } ).unwrap();
             Toast.fire({
                 icon: "success",
-                title: "New Book Added Successfully"
+                title: `Book Updated Successfully`
             });
-            navigate("/dashboard");            
-        } catch (err) {
-            console.error("Failed to add book:", err);
-            alert("token expired, log in again");
-            navigate("/admin");
+            navigate('/dashboard');           
+        } catch (error) {
+            console.log("Failed to update book");
+            alert("Failed to update book");
         }
     }
 
     return <form onSubmit={handleSubmit(onSubmit)} className="mt-[10vh] mx-auto w-[75vw] h-[75vh] border-2 border-black flex flex-col justify-evenly items-center text-lg">
-        <p className="text-2xl font-bold">Add New Book</p>
+        <p className="text-2xl font-bold">Edit Book</p>
         
         <div className="input-div w-[60vw] flex justify-between">
             <label htmlFor="title">Title</label>
@@ -88,8 +121,8 @@ const AddNewBook = () => {
             <input {...register("price", { required: true })} className="pl-3 border-2 border-black w-[30vw] rounded-lg" type="text" id="price"/>
         </div>
         
-        <button className="cursor-pointer hover:scale-110 bg-blue-500 w-[7.5vw] h-[5vh] text-white font-bold rounded-md my-4" type="submit">Add Book</button>
+        <button className="cursor-pointer hover:scale-110 bg-blue-500 w-[7.5vw] h-[5vh] text-white font-bold rounded-md my-4" type="submit">Update Book</button>
     </form>
 };
 
-export default AddNewBook;
+export default EditBook;

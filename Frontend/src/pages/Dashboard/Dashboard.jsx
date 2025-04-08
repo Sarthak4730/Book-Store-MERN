@@ -93,26 +93,28 @@ const Dashboard = () => {
         </div>
 
         <table className="manage w-[70vw] mt-6">
-            <tr className="column-headings font-bold text-lg h-[7vh] border-y-4 border-yellow-400">
-                <th className="w-[30vw] text-start">Title</th>
-                <th className="w-[20vw] text-start">Category</th>
-                <th className="w-[9vw] text-start">Price</th>
-                <th  className="w-[11vw] text-start">Actions</th>
-            </tr>
+            <thead>
+                <tr className="column-headings font-bold text-lg h-[7vh] border-y-4 border-yellow-400">
+                    <th className="w-[30vw] text-start">Title</th>
+                    <th className="w-[20vw] text-start">Category</th>
+                    <th className="w-[9vw] text-start">Price</th>
+                    <th  className="w-[11vw] text-start">Actions</th>
+                </tr>
+            </thead>
 
+            <tbody>
             { books && books.map( (b,index) => (
                 <tr key={index} className="book-rows h-[7.5vh]">
-                    {/* <td> */}
-                        <td className="w-[30vw]">{b.title}</td>
-                        <td className="w-[20vw]">{b.genre}</td>
-                        <td className="w-[9vw]">{b.price}</td>
-                        <td className="flex w-[11vw] h-[7.5vh] items-center justify-between">
-                            <button onClick={() => handleEdit(b._id)} className="cursor-pointer bg-blue-500 w-[5vw] h-[4vh] text-white font-bold rounded-md flex justify-center items-center hover:scale-110">Edit</button>
-                            <button onClick={() => handleDelete(b._id)} className="cursor-pointer bg-red-500 w-[5vw] h-[4vh] text-white font-bold rounded-md flex justify-center items-center hover:scale-110">Delete</button>
-                        </td>
-                    {/* </td> */}
+                    <td className="w-[30vw]">{b.title}</td>
+                    <td className="w-[20vw]">{b.genre}</td>
+                    <td className="w-[9vw]">{b.price}</td>
+                    <td className="flex w-[11vw] h-[7.5vh] items-center justify-between">
+                        <button onClick={() => handleEdit(b._id)} className="cursor-pointer bg-blue-500 w-[5vw] h-[4vh] text-white font-bold rounded-md flex justify-center items-center hover:scale-110">Edit</button>
+                        <button onClick={() => handleDelete(b._id)} className="cursor-pointer bg-red-500 w-[5vw] h-[4vh] text-white font-bold rounded-md flex justify-center items-center hover:scale-110">Delete</button>
+                    </td>
                 </tr>
             ) ) }
+            </tbody>
         </table>
     </div>
 }
