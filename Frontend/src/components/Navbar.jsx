@@ -58,13 +58,16 @@ const Navbar = ( { count } ) => {
 
   return(
     <nav className="flex justify-between items-center h-[7.5vh] w-[100vw] fixed top-0 px-10 bg-white z-10">
-        <div className="left flex w-[20vw] justify-between">
+        <div className="left flex w-[16vw] justify-between">
             <Link to="/">
-              <svg className="mt-1.5" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><g fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path strokeDasharray={16} strokeDashoffset={16} d="M5 21h14"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"></animate></path><path strokeDasharray={14} strokeDashoffset={14} d="M5 21v-13M19 21v-13"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="14;0"></animate></path><path strokeDasharray={28} strokeDashoffset={28} d="M2 10l10 -8l10 8"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.6s" values="28;0"></animate></path></g></svg> 
+              <svg className="mt-2.5 hover:scale-115" xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><g fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path strokeDasharray={16} strokeDashoffset={16} d="M5 21h14"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="16;0"></animate></path><path strokeDasharray={14} strokeDashoffset={14} d="M5 21v-13M19 21v-13"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="14;0"></animate></path><path strokeDasharray={28} strokeDashoffset={28} d="M2 10l10 -8l10 8"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.6s" values="28;0"></animate></path></g></svg> 
             </Link>
-            <div className="searchbar-div mt-1 bg-gray-300 w-[16vw] flex justify-evenly p-[5px] rounded-md">
+            {/* <div className="searchbar-div mt-1 bg-gray-300 w-[16vw] flex justify-evenly p-[5px] rounded-md">
               <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 24 24"><g fill="none" stroke="#000" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}><path strokeDasharray={40} strokeDashoffset={40} d="M10.76 13.24c-2.34 -2.34 -2.34 -6.14 0 -8.49c2.34 -2.34 6.14 -2.34 8.49 0c2.34 2.34 2.34 6.14 0 8.49c-2.34 2.34 -6.14 2.34 -8.49 0Z"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.5s" values="40;0"></animate></path><path strokeDasharray={12} strokeDashoffset={12} d="M10.5 13.5l-7.5 7.5"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.5s" dur="0.2s" values="12;0"></animate></path></g></svg>
               <input className="w-[12vw] focus:outline-none" type="text" name="searchbar" id="searchbar" placeholder="What are you looking for?"/>
+            </div> */}
+            <div className="store-name-div mt-1 bg-gray-300 w-[12vw] flex justify-evenly p-[5px] rounded-md font-bold text-xl">
+              <p type="text" name="store-name" id="store-name">SKY Book Store</p>
             </div>
         </div>
 
