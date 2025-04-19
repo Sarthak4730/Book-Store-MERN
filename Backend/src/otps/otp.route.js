@@ -22,6 +22,8 @@ router.post('/send-otp', async (req, res) => {
 
     await transporter.sendMail( {
         to: email,
+        // from: process.env.EMAIL_USER,
+        from: `"SKY Store" <${process.env.EMAIL_USER}>`,
         subject: "Your OTP Code",
         html: `<h1>${otp}</h1> <p>Valid for 5 minutes</p>`
     } );

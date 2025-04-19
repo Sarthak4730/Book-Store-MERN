@@ -20,7 +20,7 @@ const LoginPage = () => {
         try {
             await signInWithGoogle();
             alert("Google Sign In Successful");
-            navigate("/");
+            navigate("/otp-request");
         } catch (error) {
             alert("Google Sign In Failed");
             console.log(error);

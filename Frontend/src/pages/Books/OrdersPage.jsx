@@ -16,7 +16,12 @@ const OrdersPage = () => {
     // console.log("orders", orders);
 
     if(isLoading) return <h1>isLoading</h1>
-    if(isError) return <h1>isError</h1>
+    if(isError) {
+        console.log(isError);
+        return <div className="ml-[50vw] mt-[30vh]">
+            <h1>Error: {isError}</h1>
+        </div>
+    }
 
     return <>
         <Navbar count={cartItems.length} />

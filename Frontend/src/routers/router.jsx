@@ -15,6 +15,9 @@ import Dashboard from '../pages/Dashboard/Dashboard'
 import AddNewBook from '../pages/Dashboard/AddNewBook'
 import EditBook from '../pages/Dashboard/EditBook'
 
+import RequestOTP from '../pages/OTP/requestOTP'
+import VerifyOTP from '../pages/OTP/VerifyOTP'
+
 const router = createBrowserRouter([
     {
         path: '/',
@@ -23,6 +26,14 @@ const router = createBrowserRouter([
     {
         path: '/login',
         element: <Login />
+    },
+    {
+        path: '/otp-request',
+        element: <RequestOTP />
+    },
+    {
+        path: '/otp-verify',
+        element: <VerifyOTP />
     },
     {
         path: '/register',
