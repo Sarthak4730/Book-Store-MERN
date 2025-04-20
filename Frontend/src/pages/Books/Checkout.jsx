@@ -55,7 +55,11 @@ const CartPage = () => {
         };
 
         try {
-            await createOrder(newOrder).unwrap();
+            // await createOrder(newOrder).unwrap();
+            await createOrder({
+                ...newOrder,
+                email: currentUser.email,
+            }).unwrap();
             // alert("Success in placing order");
             Toast.fire({
                 icon: "success",

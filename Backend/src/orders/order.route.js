@@ -8,6 +8,7 @@ const nodemailer = require("nodemailer");
 router.post('/create-order', async (req, res) => {
     try {
         const newOrder = await Order( { ...req.body } );
+        const userEmail = newOrder.email;
         await newOrder.save();
         // console.log("Success creating order");
         res.status(200).send( { message: "Order posted successfully", order: newOrder } );
@@ -22,16 +23,17 @@ router.post('/create-order', async (req, res) => {
 
         const populatedOrder = await newOrder.populate('productIds');
         const mailOptions = {
-            to: user.email,
-            subject: "Your Order Confirmation",
+            to: userEmail,
+            from: `"SKY Store" <${process.env.EMAIL_USER}>`,
+            subject: "Your order has been placed successfully",
             html: `
-                <h2>Thank you for your purchase</h2>
-                <p><strong>Order Summary:</p></strong>
-                <ul>
-                    ${ populatedOrder.productIds.map( book => `<li>${book.title} - ₹${book.price}</li>` ).join("") }
-                </ul>
-                <p>Total: ₹${newOrder.totalPrice}</p>
-                <p>Delivery to: ${newOrder.name}, ${newOrder.address.area}, ${newOrder.address.city}, ${newOrder.address.state} - ${newOrder.address.pincode}</p>
+                <h2>Thank you for your purchase !!!</h2>
+                <h3>Order Summary: Books Purchased are:-</h3>
+                <ol>
+                    ${ populatedOrder.productIds.map( book => `<li>${book.title} = <b>${book.price}</b></li>` ).join("") }
+                </ol>
+                <h1>Total: ₹${newOrder.totalPrice}</h1>
+                <h3>Deliver to the address: ${newOrder.name}, ${newOrder.address.area}, ${newOrder.address.city}, ${newOrder.address.state} - ${newOrder.address.pincode}</h3>
             `
         };
 
