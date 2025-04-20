@@ -6,9 +6,13 @@ import { useCreateOrderMutation } from "../../redux/features/orders/ordersApi";
 import Swal from 'sweetalert2';
 import { useNavigate } from "react-router";
 
+import { useDispatch } from "react-redux";
+import { clearCart } from "../../redux/features/cart/cartSlice";
+
 const CartPage = () => {
     const cartItems = useSelector(state => state.cart.cartItems);
     const navigate = useNavigate();
+    const dispatch = useDispatch();
     
     const { currentUser } = useAuth(null);
     const {
@@ -17,9 +21,9 @@ const CartPage = () => {
         watch,
         formState: { errors },
     } = useForm();
-
+    
     const [ createOrder, {isLoading, error} ] = useCreateOrderMutation();
-
+    
     const rupeeRemovedTotal = () => {
         const rupeeRemoved = cartItems.map(item => {
             return parseInt( item.price.replace('₹', '') )
@@ -38,7 +42,7 @@ const CartPage = () => {
             toast.addEventListener('mouseleave', Swal.resumeTimer);
         }
     });
-
+    
     const onSubmit = async (data) => {
         const newOrder = {
             name: data.fullname,
@@ -53,7 +57,7 @@ const CartPage = () => {
             productIds: cartItems.map(item => item._id),
             totalPrice: rupeeRemovedTotal()
         };
-
+        
         try {
             // await createOrder(newOrder).unwrap();
             await createOrder({
@@ -66,6 +70,8 @@ const CartPage = () => {
                 title: `Success in placing order`
             });
             navigate('/orders');
+            dispatch( clearCart() );
+
         } catch (error) {
             console.error("Error sending newOrder to backend\n", error);
             // alert("Failed to place order");

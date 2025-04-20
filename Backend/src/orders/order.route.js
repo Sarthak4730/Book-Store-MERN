@@ -27,13 +27,15 @@ router.post('/create-order', async (req, res) => {
             from: `"SKY Store" <${process.env.EMAIL_USER}>`,
             subject: "Your order has been placed successfully",
             html: `
-                <h2>Thank you for your purchase !!!</h2>
-                <h3>Order Summary: Books Purchased are:-</h3>
+                <p>Thank you for your purchase !!!</p>
+                <p>Order Summary: Books Purchased are:-</p>
                 <ol>
-                    ${ populatedOrder.productIds.map( book => `<li>${book.title} = <b>${book.price}</b></li>` ).join("") }
+                    ${ populatedOrder.productIds.map( book => `<li>${book.title} <img src=${book.image} alt="bookPic"/> Price = <b>${book.price}</b></li>` ).join("") }
                 </ol>
-                <h1>Total: ₹${newOrder.totalPrice}</h1>
-                <h3>Deliver to the address: ${newOrder.name}, ${newOrder.address.area}, ${newOrder.address.city}, ${newOrder.address.state} - ${newOrder.address.pincode}</h3>
+                <h2>Total: ₹${newOrder.totalPrice}</h2>
+                <p>Deliver to the address: ${newOrder.name}, ${newOrder.address.area}, ${newOrder.address.city}, ${newOrder.address.state} - ${newOrder.address.pincode}</p>
+                <p>If you have any feedback for our website, reply to this mail, thank you for using our service.</p>
+            
             `
         };
 
