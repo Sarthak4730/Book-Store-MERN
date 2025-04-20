@@ -8,6 +8,7 @@ const nodemailer = require("nodemailer");
 router.post('/create-order', async (req, res) => {
     try {
         const newOrder = await Order( { ...req.body } );
+        // console.log("newOrder: ",newOrder);
         const userEmail = newOrder.email;
         await newOrder.save();
         // console.log("Success creating order");
@@ -28,14 +29,13 @@ router.post('/create-order', async (req, res) => {
             subject: "Your order has been placed successfully",
             html: `
                 <p>Thank you for your purchase !!!</p>
-                <p>Order Summary: Books Purchased are:-</p>
+                <p><b><u>Order Summary</u></b>: Books Purchased are:-</p>
                 <ol>
-                    ${ populatedOrder.productIds.map( book => `<li>${book.title} <img src=${book.image} alt="bookPic"/> Price = <b>${book.price}</b></li>` ).join("") }
+                    ${ populatedOrder.productIds.map( book => `<li style="display: flex; flex-direction: column;">${book.title} <img src=${book.image} alt="bookPic" width="140" height="210"/> Price = <b>${book.price}</b></li>` ) }
                 </ol>
                 <h2>Total: ₹${newOrder.totalPrice}</h2>
-                <p>Deliver to the address: ${newOrder.name}, ${newOrder.address.area}, ${newOrder.address.city}, ${newOrder.address.state} - ${newOrder.address.pincode}</p>
-                <p>If you have any feedback for our website, reply to this mail, thank you for using our service.</p>
-            
+                <p><b><u>Deliver to the address</u></b>: ${newOrder.name}, ${newOrder.address.area}, ${newOrder.address.city}, ${newOrder.address.state} - ${newOrder.address.pincode}</p>
+                <i>If you have any feedback for our website, reply to this mail, thank you for using our service.</i>
             `
         };
 
@@ -49,7 +49,7 @@ router.post('/create-order', async (req, res) => {
 router.get('/get-orders/:email', async (req, res) => {
     try {
         const { email } = req.params;
-        // console.log("email ",email);
+        // console.log("email ", email);
 
         const orders = await Order.find( { email } ).sort( { createdAt: -1 } );
         if( !orders ) return res.status(404).json( { message: "Orders not found" } );

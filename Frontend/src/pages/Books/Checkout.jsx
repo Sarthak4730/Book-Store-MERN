@@ -35,7 +35,18 @@ const CartPage = () => {
         toast: true,
         position: "top-end",
         showConfirmButton: false,
-        timer: 1500,
+        timer: 5000,
+        timerProgressBar: true,
+        didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+        }
+    });
+    const Toast2 = Swal.mixin({
+        toast: true,
+        position: "top",
+        showConfirmButton: false,
+        timer: 10000,
         timerProgressBar: true,
         didOpen: (toast) => {
             toast.addEventListener('mouseenter', Swal.stopTimer);
@@ -68,6 +79,10 @@ const CartPage = () => {
             Toast.fire({
                 icon: "success",
                 title: `Success in placing order`
+            });
+            Toast2.fire({
+                icon: "success",
+                title: "Check your Email Inbox, Order details have been sent"
             });
             navigate('/orders');
             dispatch( clearCart() );

@@ -15,13 +15,15 @@ const OrdersPage = () => {
     const orders = data?.orders || [];
     // console.log("orders", orders);
 
-    if(isLoading) return <h1>isLoading</h1>
     if(isError) {
         console.log(isError);
         return <div className="ml-[50vw] mt-[30vh]">
             <h1>Error: {isError}</h1>
         </div>
     }
+
+    // const populatedOrder = await newOrder.populate('productIds');
+    // populatedOrder.productIds.map( book => `<li>${book.title} - <img src=${book.image} alt="bookPic" width="100" height="150"/></li>` ).join("");
 
     return <>
         <Navbar count={cartItems.length} />
