@@ -76,10 +76,6 @@ const CartPage = () => {
                 email: currentUser.email,
             }).unwrap();
             // alert("Success in placing order");
-            Toast.fire({
-                icon: "success",
-                title: `Success in placing order`
-            });
             Toast2.fire({
                 icon: "success",
                 title: "Check your Email Inbox, Order details have been sent"

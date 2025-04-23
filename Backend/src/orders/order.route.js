@@ -28,14 +28,26 @@ router.post('/create-order', async (req, res) => {
             from: `"SKY Store" <${process.env.EMAIL_USER}>`,
             subject: "Your order has been placed successfully",
             html: `
-                <p>Thank you for your purchase !!!</p>
-                <p><b><u>Order Summary</u></b>: Books Purchased are:-</p>
+                <p>Thank you for your purchase</p>
+                <b><u>Books Purchased - Order Summary :-</u></b>
                 <ol>
-                    ${ populatedOrder.productIds.map( book => `<li style="display: flex; flex-direction: column;">${book.title} <img src=${book.image} alt="bookPic" width="140" height="210"/> Price = <b>${book.price}</b></li>` ) }
+                    ${ populatedOrder.productIds.map( book => `
+                        <li style="display: flex; flex-direction: column;">
+                            <span>${book.title}</span>
+                            <img src=${book.image} alt="bookPic" width="140" height="210"/>
+                            <span>Price = <b>${book.price}</b></span>
+                        </li>
+                    ` ) }
                 </ol>
                 <h2>Total: ₹${newOrder.totalPrice}</h2>
-                <p><b><u>Deliver to the address</u></b>: ${newOrder.name}, ${newOrder.address.area}, ${newOrder.address.city}, ${newOrder.address.state} - ${newOrder.address.pincode}</p>
-                <i>If you have any feedback for our website, reply to this mail, thank you for using our service.</i>
+                <p><b><u>Deliver to the address:</u></b>
+                <div>
+                    <p>${newOrder.name},</p>
+                    <p>${newOrder.address.area},</p>
+                    <p>${newOrder.address.city},</p>
+                    <p>${newOrder.address.state} - ${newOrder.address.pincode}</p>
+                </div>
+                <i><b>If you have any feedback for our website, reply to this mail, thank you for using our service.</b></i>
             `
         };
 

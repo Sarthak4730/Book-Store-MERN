@@ -29,7 +29,7 @@ const OrdersPage = () => {
         <Navbar count={cartItems.length} />
         
         <div className="container my-[10vh] flex flex-col items-center w-[70vw] mx-auto">
-            <p className="text-3xl font-bold mt-[3vh]">Your Orders: ({currentUser?.email})</p>
+            <p className="text-3xl font-bold mt-[5vh]">Your Orders: ({currentUser?.email})</p>
             {
                 orders.length === 0 
                 ? ( <p className="text-xl font-semibold my-[3vh]">No orders yet.</p> )
