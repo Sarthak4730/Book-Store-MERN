@@ -2,10 +2,12 @@ import { Link } from "react-router";
 import { useForm } from "react-hook-form";
 import { useAuth } from "../../context/AuthContext";
 import { useNavigate } from 'react-router-dom';
+import { useState } from "react";
 
 const RegisterPage = () => {
     const { registerUser, signInWithGoogle } = useAuth();
     const navigate = useNavigate();
+    const [showPassword, setShowPassword] = useState(false);
 
     const {
         register,
