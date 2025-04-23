@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 const VerifyOTP = () => {
     const navigate = useNavigate();
     const { currentUser } = useAuth(null);
-    const email = currentUser.providerData[0].email;
+    const email = currentUser?.email;
     const [otp, setOtp] = useState("");
 
     const Toast = Swal.mixin({

@@ -6,7 +6,7 @@ import { useAuth } from "../../context/AuthContext";
 const RequestOTP = () => {
     const navigate = useNavigate();
     const { currentUser } = useAuth(null);
-    const email = currentUser.providerData[0].email;
+    const email = currentUser?.email;
 
     const sendOTP = async () => {
         try {

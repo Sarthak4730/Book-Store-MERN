@@ -32,7 +32,8 @@ const LoginPage = () => {
         try {
             await loginUser(data.email, data.password);
             alert("Login Successful");
-            navigate("/");
+            // navigate("/");
+            navigate("/otp-request");
         } catch (error) {
             console.log("invalid email and/or password");
             console.log(error);

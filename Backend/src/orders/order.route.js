@@ -30,12 +30,14 @@ router.post('/create-order', async (req, res) => {
             html: `
                 <p>Thank you for your purchase</p>
                 <b><u>Books Purchased - Order Summary :-</u></b>
-                <ol>
+                <ol style="padding-left: 20px; font-family: Arial, sans-serif;">
                     ${ populatedOrder.productIds.map( book => `
-                        <li style="display: flex; flex-direction: column;">
-                            <span>${book.title}</span>
-                            <img src=${book.image} alt="bookPic" width="140" height="210"/>
-                            <span>Price = <b>${book.price}</b></span>
+                        <li style="margin-bottom: 25px;">
+                            <div style="margin-left: 10px;">
+                                <span>${book.title}</span>
+                                <img src=${book.image} alt="bookPic" width="140" height="210"/>
+                                <span>Price = <b>${book.price}</b></span>
+                            </div>
                         </li>
                     ` ) }
                 </ol>
