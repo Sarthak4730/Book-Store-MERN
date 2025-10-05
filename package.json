@@ -1,7 +1,0 @@
-{
-  "dependencies": {
-    "firebase": "^11.5.0",
-    "react-hook-form": "^7.55.0",
-    "sweetalert2": "^11.6.13"
-  }
-}
