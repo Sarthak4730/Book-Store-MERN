@@ -18,7 +18,7 @@ const AdminPage = () => {
     const onSubmit = async (data) => {
         try {
             // console.log(data);
-            const response = await axios.post('http://localhost:3000/api/auth/admin', data, {
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/auth/admin`, data, {
             // const response = await axios.post('??? https://ccp-by-sk.vercel.app/api/auth/admin', data, {
                 headers: {
                     'Content-Type': 'application/json'

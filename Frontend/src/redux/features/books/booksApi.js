@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
 const baseQuery = fetchBaseQuery({ 
-    baseUrl: 'http://localhost:3000/api/books',
+    baseUrl: `${process.env.REACT_APP_API_URL}/api/books`,
     // baseUrl: 'https://ccp-by-sk.vercel.app/api/books',
     credentials: 'include',
     prepareHeaders: (Headers) => {

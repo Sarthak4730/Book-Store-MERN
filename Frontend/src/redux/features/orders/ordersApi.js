@@ -3,7 +3,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 const ordersApi = createApi({
     reducerPath: 'ordersApi',
     baseQuery: fetchBaseQuery({
-        baseUrl: 'http://localhost:3000/api/orders',
+        baseUrl: `${process.env.REACT_APP_API_URL}/api/orders`,
         // baseUrl: 'https://ccp-by-sk.vercel.app/api/orders',
         credentials: 'include'
     }),

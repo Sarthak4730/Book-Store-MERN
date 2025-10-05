@@ -10,7 +10,7 @@ const RequestOTP = () => {
 
     const sendOTP = async () => {
         try {
-            const response = await axios.post("http://localhost:3000/api/otp/send-otp", {email} );
+            const response = await axios.post(`${process.env.REACT_APP_API_URL}/api/otp/send-otp`, {email} );
             // const response = await axios.post("https://ccp-by-sk.vercel.app/api/otp/send-otp", {email} );
             console.log(response.data.message);
         } catch (err) {
