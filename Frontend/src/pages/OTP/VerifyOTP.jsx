@@ -25,6 +25,7 @@ const VerifyOTP = () => {
     const checkOTP = async () => {
         try {
             const response = await axios.post("http://localhost:3000/api/otp/verify-otp", {
+            // const response = await axios.post("https://ccp-by-sk.vercel.app/api/otp/verify-otp", {
                 email,
                 code: otp,
             });

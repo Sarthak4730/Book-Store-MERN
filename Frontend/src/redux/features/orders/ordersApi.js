@@ -4,6 +4,7 @@ const ordersApi = createApi({
     reducerPath: 'ordersApi',
     baseQuery: fetchBaseQuery({
         baseUrl: 'http://localhost:3000/api/orders',
+        // baseUrl: 'https://ccp-by-sk.vercel.app/api/orders',
         credentials: 'include'
     }),
     tagTypes: ['Orders'],

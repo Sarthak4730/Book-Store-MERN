@@ -12,6 +12,7 @@ const app = express();
 app.use( express.json() );
 app.use( cors( {
     origin: ['http://localhost:3000', 'http://localhost:5173'],
+    // origin: "https://ccp-by-sk.vercel.app",
     credentials: true
 } ) );
 

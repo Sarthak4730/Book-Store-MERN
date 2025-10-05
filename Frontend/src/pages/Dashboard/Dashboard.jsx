@@ -19,6 +19,7 @@ const Dashboard = () => {
         const fetchData = async () => {  
             try {
                 const response = await axios.get("http://localhost:3000/api/admin", {
+                // const response = await axios.get("https://ccp-by-sk.vercel.app/api/admin", {
                     headers: {
                         "Authorization": ` Bearer ${ localStorage.getItem("token") } `,
                         "Content-Type": "application/json"
